@@ -6,7 +6,7 @@ import renderTVShowCard from './TVShowCard'
 const $ = document.querySelector.bind(document)
 
 const http = axios.create({
-  baseURL: API_URL,
+  baseURL: API_URL
 })
 
 const searchShows = async () => {
@@ -17,22 +17,25 @@ const searchShows = async () => {
     const response = await http.get('/videos', {
       params: {
         search: filter,
-      },
+      }
     })
-
+    
     if (response.status == 200) {
       const { data } = response
+      const {list} = data
+      
       const resultArea = <HTMLDivElement>$('#result-area')
       resultArea.innerHTML = ''
-      data.forEach((jsonObj: any) => {
+      list.forEach((jsonObj: any) => {
         const { show } = jsonObj
         const tvShow = getTvShow(show)
         renderTVShowCard(tvShow, resultArea)
+       
       })
-    }
+    } 
+
   }
 }
-
 searchShows()
 
 const renderSearchForm = (container: HTMLElement) => {

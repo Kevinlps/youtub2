@@ -9,10 +9,10 @@ const $ = document.querySelector.bind(document)
 
 const searchTVShow = async (id: string) => {
   const http = axios.create({
-    baseURL:THUMB_API_URL,
+    baseURL:THUMB_API_URL
   })
 
-  const response = await http.get(`/${id}`)
+  const response = await http.get(`/video/${id}`)
 
   if (response.status == 200) {
     const { data } = response
