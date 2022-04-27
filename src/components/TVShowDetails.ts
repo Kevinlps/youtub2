@@ -9,7 +9,6 @@ const renderTVShowDetails = (show: TVShow, container: HTMLElement) => {
 
       <div id="details-container">
         <p><span class="detail-title">Título:</span> ${show.titulo}</p>
-        <p><span class="detail-title">Tipo:</span> ${show.owner}</p>
         <p><span class="detail-title">Canal:</span> ${show.canal}</p>
 
          <button id="backbtn" onclick="history.back()">Voltar</butt>
