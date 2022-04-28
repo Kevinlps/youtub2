@@ -2,14 +2,14 @@ import { getTvShow } from './models/TVShow'
 import axios from 'axios'
 
 import renderTVShowDetails from './components/TVShowDetails'
-import {THUMB_API_URL} from './config'
+import {API_URL} from './config'
 import './style.css'
 
 const $ = document.querySelector.bind(document)
 
 const searchTVShow = async (id: string) => {
   const http = axios.create({
-    baseURL:THUMB_API_URL
+    baseURL: API_URL
   })
 
   const response = await http.get(`/video/${id}`)

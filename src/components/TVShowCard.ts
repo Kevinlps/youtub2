@@ -1,13 +1,14 @@
-import TVShow from '../models/TVShow'
+import Video from '../models/TVShow'
 
-const renderTVShowCard = (show: TVShow, container: HTMLElement) => {
+const renderTVShowCard = (show: Video, container: HTMLElement) => {
   const htmlContent = `
     <div class="tv-card">
-    
+    <a id="modal-${show.id}" href="video.html?id=${show.id}">
+        <div class="show-banner">
+            <img src="https://www.dailymotion.com/thumbnail/video/${show.id}">
         </div>
-        <h3>${show.titulo}</h3>
       </a>
-   
+    </div>
     `
   container.innerHTML += htmlContent
 }
