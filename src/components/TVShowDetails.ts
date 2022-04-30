@@ -14,7 +14,7 @@ const renderTVShowDetails = (show: Video, container: HTMLElement) => {
 </div>
 <h2 id="titulo-do-video">${show.title}</h2>
 
-<button id="btnvoltar">Voltar</button>
+<button id="backbtn" onclick="history.back()">Voltar</butt>
   `
 
   container.innerHTML = htmlContent
