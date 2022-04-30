@@ -1,15 +1,20 @@
-import TVShow from '../models/TVShow'
 
-//const $ = document.querySelector.bind(document)
+import Video from '../models/TVShow'
 
-const renderTVShowDetails = (show: TVShow, container: HTMLElement) => {
+
+
+const renderTVShowDetails = (show: Video, container: HTMLElement) => {
   const htmlContent = `
-  <div id="videoRendered"> 
-  <iframe style="width:100%; height:100%; position:absolute;top:50px; overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/${show.id}?autoplay=1" margin="0 auto" width="100%" height="100%" allowfullscreen allow="autoplay">
-  </iframe>
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> 
+
+<iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/${show.id}?autoplay=1" width="100%" height="100%" allowfullscreen allow="autoplay">
+
+</iframe>
+
 </div>
-<br>
-<h2>${show.titulo}</h2>
+<h2 id="titulo-do-video">${show.title}</h2>
+
+<button id="btnvoltar">Voltar</button>
   `
 
   container.innerHTML = htmlContent

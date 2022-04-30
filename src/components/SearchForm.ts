@@ -16,7 +16,7 @@ const searchShows = async () => {
   if (filter) {
     const response = await http.get('/videos', {
       params: {
-        search: filter,
+        search: filter
       }
     })
     
@@ -27,9 +27,8 @@ const searchShows = async () => {
       const resultArea = <HTMLDivElement>$('#result-area')
       resultArea.innerHTML = ''
       list.forEach((jsonObj: any) => {
-        const { show } = jsonObj
-        const tvShow = getTvShow(show)
-        renderTVShowCard(tvShow, resultArea)
+        const Videothumb = getTvShow(jsonObj)
+        renderTVShowCard(Videothumb, resultArea)
        
       })
     } 

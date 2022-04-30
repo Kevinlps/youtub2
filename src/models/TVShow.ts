@@ -15,7 +15,7 @@ export const getTvShow = (objJson: any): Video => {
 } = objJson
    
 
-  const tvShow: Video = {
+const tvShow: Video = {
     id,
     title,
     thumbnail,
@@ -23,6 +23,6 @@ export const getTvShow = (objJson: any): Video => {
   
   }
   return tvShow
-}
+} 
 
 export default Video

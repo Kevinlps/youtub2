@@ -5,7 +5,7 @@ import renderTVShowDetails from './components/TVShowDetails'
 import {API_URL} from './config'
 import './style.css'
 
-const $ = document.querySelector.bind(document)
+
 
 const searchTVShow = async (id: string) => {
   const http = axios.create({
@@ -17,7 +17,7 @@ const searchTVShow = async (id: string) => {
   if (response.status == 200) {
     const { data } = response
     const tvShow = getTvShow(data)
-    const container = <HTMLDivElement>$('#container')
+    const container = <HTMLDivElement>document.querySelector('#container')
     renderTVShowDetails(tvShow, container)
   }
 }

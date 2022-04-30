@@ -96,6 +96,7 @@ body {
 .tv-card {
   width: 33%;
   margin-bottom: 20px;
+  
 }
 
 .tv-card h3 {
@@ -104,11 +105,13 @@ body {
 }
 
 .show-banner img {
-  border-radius: 15px;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 #show-container {
@@ -131,7 +134,9 @@ a {
 #image-container img {
   width: 90%;
 }
-
+#body-container{
+  margin-top: 40px;
+}
 #details-container {
   width: 50%;
   font-family: 'regular';
@@ -141,6 +146,9 @@ a {
 
 .detail-title {
   font-family: 'title';
+}
+#titulo-do-video{
+  color: white
 }
 
 #backbtn {
